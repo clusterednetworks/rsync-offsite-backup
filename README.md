@@ -11,7 +11,9 @@ Be sure to edit the configuration options at the beginning of the script to matc
 
 3. Download the script(s).
 
-<pre>wget https://raw.githubusercontent.com/clusterednetworks/backup-mysql/master/backup-mysql.sh</pre>
+<pre>wget https://raw.githubusercontent.com/clusterednetworks/rsync-offsite-backup/master/rsync.server.ssh.key.sh</pre>
+
+<pre>wget https://raw.githubusercontent.com/clusterednetworks/rsync-offsite-backup/master/rsync.server.ssh.password.sh</pre>
 
 4. Edit the configuration options at the beginning of the script to match your environment prior to executing.
 <pre>
@@ -35,13 +37,13 @@ REMOTE_PATH=/home/backup/backuptest
 
 5. Make the script executable
 
-<pre>chmod +x backup-mysql.sh</pre>
+<pre>chmod +x rsync.server.ssh.key.sh</pre>
 
 6. Run the script.
 
-<pre>./backup-mysql.sh</pre>
+<pre>./rsync.server.ssh.key.sh</pre>
 
 8. Setup a cronjob to run the script daily/weekly if you choose.
 <pre>
-5 1   * * * /etc/backup-mysql.sh >/dev/null 2>&1
+5 1   * * * /etc/rsync.server.ssh.key.sh >/dev/null 2>&1
 </pre>
